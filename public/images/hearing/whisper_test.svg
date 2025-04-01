@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f8f9fa"/>
+  
+  <!-- Person whispering icon -->
+  <circle cx="120" cy="150" r="25" fill="#4b5563"/>
+  <path d="M 145,140 
+           C 155,140 165,135 170,130
+           C 175,125 175,120 170,115
+           C 165,110 155,105 145,105" 
+        stroke="#4b5563" stroke-width="3" fill="none"/>
+  
+  <!-- Subtle sound waves -->
+  <path d="M 150,150 Q 180,150 200,150" stroke="#9ca3af" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M 150,145 Q 175,145 195,145" stroke="#9ca3af" stroke-width="0.8" fill="none" opacity="0.4"/>
+  <path d="M 150,155 Q 175,155 195,155" stroke="#9ca3af" stroke-width="0.8" fill="none" opacity="0.4"/>
+  
+  <!-- Ear icon -->
+  <path d="M270,150 C270,130 250,120 240,120 C225,120 220,130 220,140 C220,145 222,150 225,155 L232,165 C235,170 235,175 230,180 C225,185 215,180 215,170 L215,165 L205,165 L205,170 C205,190 225,200 240,190 C250,185 250,175 245,165 L240,155 C235,150 235,145 240,140 C245,135 255,140 255,150 L255,155 L265,155 Z" 
+        fill="#4b5563"/>
+  
+  <!-- Question mark -->
+  <text x="300" y="160" font-family="Arial" font-size="40" font-weight="bold" text-anchor="middle" fill="#ef4444">?</text>
+  
+  <!-- Labels -->
+  <text x="200" y="50" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">Whisper Test</text>
+  <text x="200" y="80" font-family="Arial" font-size="14" text-anchor="middle" fill="#666">Ability to hear soft or whispered speech</text>
+</svg>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f8f9fa"/>
+  
+  <!-- Person speaking -->
+  <circle cx="120" cy="150" r="25" fill="#4b5563"/>
+  
+  <!-- Clear sound waves -->
+  <path d="M 150,150 Q 180,150 200,150" stroke="#10b981" stroke-width="3" fill="none"/>
+  <path d="M 150,135 Q 175,135 195,135" stroke="#10b981" stroke-width="2" fill="none" opacity="0.8"/>
+  <path d="M 150,165 Q 175,165 195,165" stroke="#10b981" stroke-width="2" fill="none" opacity="0.8"/>
+  
+  <!-- Ear icon -->
+  <path d="M270,150 C270,130 250,120 240,120 C225,120 220,130 220,140 C220,145 222,150 225,155 L232,165 C235,170 235,175 230,180 C225,185 215,180 215,170 L215,165 L205,165 L205,170 C205,190 225,200 240,190 C250,185 250,175 245,165 L240,155 C235,150 235,145 240,140 C245,135 255,140 255,150 L255,155 L265,155 Z" 
+        fill="#4b5563"/>
+  
+  <!-- Text bubble with clear words -->
+  <rect x="300" y="130" width="70" height="40" rx="10" fill="white" stroke="#10b981" stroke-width="2"/>
+  <text x="335" y="155" font-family="Arial" font-size="12" text-anchor="middle" fill="#10b981">CLEAR</text>
+  <polygon points="300,150 290,155 300,160" fill="white" stroke="#10b981" stroke-width="2"/>
+  
+  <!-- Labels -->
+  <text x="200" y="50" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">Sound Clarity</text>
+  <text x="200" y="80" font-family="Arial" font-size="14" text-anchor="middle" fill="#666">Ability to hear sounds clearly without distortion</text>
+</svg>

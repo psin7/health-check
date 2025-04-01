@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f8f9fa"/>
+  
+  <!-- Phone icon -->
+  <rect x="160" y="120" width="80" height="140" rx="10" fill="#e5e7eb" stroke="#4b5563" stroke-width="2"/>
+  <rect x="170" y="130" width="60" height="100" rx="2" fill="#f3f4f6"/>
+  <circle cx="200" cy="245" r="10" fill="#f3f4f6" stroke="#4b5563" stroke-width="1"/>
+  
+  <!-- Sound waves -->
+  <path d="M 240,160 Q 270,160 290,160" stroke="#3b82f6" stroke-width="2" fill="none"/>
+  <path d="M 240,150 Q 265,150 285,150" stroke="#3b82f6" stroke-width="1.5" fill="none" opacity="0.7"/>
+  <path d="M 240,170 Q 265,170 285,170" stroke="#3b82f6" stroke-width="1.5" fill="none" opacity="0.7"/>
+  
+  <path d="M 240,190 Q 270,190 290,190" stroke="#3b82f6" stroke-width="2" fill="none"/>
+  <path d="M 240,180 Q 265,180 285,180" stroke="#3b82f6" stroke-width="1.5" fill="none" opacity="0.7"/>
+  <path d="M 240,200 Q 265,200 285,200" stroke="#3b82f6" stroke-width="1.5" fill="none" opacity="0.7"/>
+  
+  <!-- Ear icon -->
+  <path d="M320,180 C320,160 300,150 290,150 C275,150 270,160 270,170 C270,175 272,180 275,185 L282,195 C285,200 285,205 280,210 C275,215 265,210 265,200 L265,195 L255,195 L255,200 C255,220 275,230 290,220 C300,215 300,205 295,195 L290,185 C285,180 285,175 290,170 C295,165 305,170 305,180 L305,185 L315,185 Z" 
+        fill="#4b5563"/>
+  
+  <!-- Labels -->
+  <text x="200" y="50" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">Phone Conversation</text>
+  <text x="200" y="80" font-family="Arial" font-size="14" text-anchor="middle" fill="#666">Hearing and understanding speech over the phone</text>
+</svg>

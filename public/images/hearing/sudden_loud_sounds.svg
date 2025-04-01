@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#f8f9fa"/>
+  
+  <!-- Loud speaker icon -->
+  <path d="M120,150 L150,120 L150,180 L120,150 Z" fill="#4b5563"/>
+  <rect x="100" y="135" width="20" height="30" fill="#4b5563"/>
+  
+  <!-- Sound explosion -->
+  <path d="M 160,150 
+           L 180,130 
+           L 190,150 
+           L 210,120 
+           L 215,150 
+           L 240,110 
+           L 240,150 
+           L 270,130 
+           L 260,150 
+           L 290,150" 
+        stroke="#ef4444" stroke-width="4" fill="none"/>
+  
+  <!-- Ear with discomfort -->
+  <path d="M320,150 C320,130 300,120 290,120 C275,120 270,130 270,140 C270,145 272,150 275,155 L282,165 C285,170 285,175 280,180 C275,185 265,180 265,170 L265,165 L255,165 L255,170 C255,190 275,200 290,190 C300,185 300,175 295,165 L290,155 C285,150 285,145 290,140 C295,135 305,140 305,150 L305,155 L315,155 Z" 
+        fill="#4b5563"/>
+  
+  <!-- Pain lines -->
+  <line x1="330" y1="120" x2="340" y2="110" stroke="#ef4444" stroke-width="2"/>
+  <line x1="340" y1="130" x2="350" y2="120" stroke="#ef4444" stroke-width="2"/>
+  <line x1="340" y1="150" x2="355" y2="150" stroke="#ef4444" stroke-width="2"/>
+  <line x1="340" y1="170" x2="350" y2="180" stroke="#ef4444" stroke-width="2"/>
+  <line x1="330" y1="180" x2="340" y2="190" stroke="#ef4444" stroke-width="2"/>
+  
+  <!-- Labels -->
+  <text x="200" y="50" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">Sensitivity to Loud Sounds</text>
+  <text x="200" y="80" font-family="Arial" font-size="14" text-anchor="middle" fill="#666">Discomfort or pain with sudden loud noises</text>
+</svg>
