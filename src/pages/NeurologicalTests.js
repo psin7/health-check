@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import TestEngine from '../components/TestEngine';
+import { adhdTest } from '../data/testData';
 
 const NeurologicalTests = () => {
+  const [activeTest, setActiveTest] = useState(null);
+
+  const startTest = (testId) => {
+    if (testId === 'adhd') {
+      setActiveTest(adhdTest);
+    } else {
+      // Show a coming soon message for other tests
+      alert('This test is coming soon!');
+    }
+  };
+
+  const closeTest = () => {
+    setActiveTest(null);
+  };
+  
   const tests = [
     {
       id: 'adhd',
@@ -119,8 +136,9 @@ const NeurologicalTests = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="btn-secondary"
+                onClick={() => startTest(test.id)}
               >
-                Start Test
+                {test.id === 'adhd' ? 'Start Test' : 'Coming Soon'}
               </motion.button>
             </div>
           </motion.div>
@@ -140,6 +158,10 @@ const NeurologicalTests = () => {
           psychiatrist, or psychologist.
         </p>
       </motion.div>
+
+      {activeTest && (
+        <TestEngine test={activeTest} onClose={closeTest} />
+      )}
     </div>
   );
 };
