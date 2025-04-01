@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Crowd of people (background noise) -->
+  <g opacity="0.3">
+    <circle cx="50" cy="200" r="20" fill="#6c757d"/>
+    <circle cx="90" cy="220" r="20" fill="#6c757d"/>
+    <circle cx="130" cy="200" r="20" fill="#6c757d"/>
+    <circle cx="170" cy="220" r="20" fill="#6c757d"/>
+    <circle cx="210" cy="200" r="20" fill="#6c757d"/>
+    <circle cx="250" cy="220" r="20" fill="#6c757d"/>
+    <circle cx="290" cy="200" r="20" fill="#6c757d"/>
+    <circle cx="330" cy="220" r="20" fill="#6c757d"/>
+    <circle cx="370" cy="200" r="20" fill="#6c757d"/>
+  </g>
+  
+  <!-- Sound waves (background noise) -->
+  <g opacity="0.4">
+    <path d="M30,150 Q60,130 90,150" fill="none" stroke="#6c757d" stroke-width="1.5">
+      <animate attributeName="d" values="M30,150 Q60,130 90,150; M30,150 Q60,170 90,150; M30,150 Q60,130 90,150" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M130,150 Q160,170 190,150" fill="none" stroke="#6c757d" stroke-width="1.5">
+      <animate attributeName="d" values="M130,150 Q160,170 190,150; M130,150 Q160,130 190,150; M130,150 Q160,170 190,150" dur="2.7s" repeatCount="indefinite"/>
+    </path>
+    <path d="M230,150 Q260,130 290,150" fill="none" stroke="#6c757d" stroke-width="1.5">
+      <animate attributeName="d" values="M230,150 Q260,130 290,150; M230,150 Q260,170 290,150; M230,150 Q260,130 290,150" dur="3.3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M330,150 Q360,170 390,150" fill="none" stroke="#6c757d" stroke-width="1.5">
+      <animate attributeName="d" values="M330,150 Q360,170 390,150; M330,150 Q360,130 390,150; M330,150 Q360,170 390,150" dur="2.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Two people talking -->
+  <g transform="translate(150, 100)">
+    <!-- Person 1 (speaker) -->
+    <circle cx="0" cy="0" r="25" fill="#4dabf7" stroke="#333" stroke-width="1.5"/>
+    <circle cx="-10" cy="-5" r="3" fill="#333"/> <!-- eye -->
+    <circle cx="10" cy="-5" r="3" fill="#333"/> <!-- eye -->
+    <path d="M-10,10 Q0,20 10,10" fill="none" stroke="#333" stroke-width="1.5"/> <!-- smile -->
+    
+    <!-- Speech bubble -->
+    <path d="M30,-10 Q70,-20 70,0 Q70,20 30,10 Z" fill="#ffffff" stroke="#333" stroke-width="1.5"/>
+    <text x="50" y="5" font-family="Arial" font-size="10" text-anchor="middle" fill="#333">Hello!</text>
+    
+    <!-- Sound waves from speaker -->
+    <path d="M30,0 Q40,0 50,0" fill="none" stroke="#4dabf7" stroke-width="2">
+      <animate attributeName="d" values="M30,0 Q40,-5 50,0; M30,0 Q40,5 50,0; M30,0 Q40,-5 50,0" dur="1s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <g transform="translate(250, 100)">
+    <!-- Person 2 (listener) -->
+    <circle cx="0" cy="0" r="25" fill="#ffa94d" stroke="#333" stroke-width="1.5"/>
+    <circle cx="-10" cy="-5" r="3" fill="#333"/> <!-- eye -->
+    <circle cx="10" cy="-5" r="3" fill="#333"/> <!-- eye -->
+    <path d="M-10,10 Q0,5 10,10" fill="none" stroke="#333" stroke-width="1.5"/> <!-- confused mouth -->
+    
+    <!-- Question mark above head -->
+    <text x="0" y="-35" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">?</text>
+    <circle cx="0" cy="-35" r="15" fill="none" stroke="#333" stroke-width="1" opacity="0.5">
+      <animate attributeName="r" values="12;15;12" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Noise cancellation visualization -->
+  <g transform="translate(200, 170)">
+    <path d="M-100,0 L100,0" stroke="#e03131" stroke-width="1.5" stroke-dasharray="5,3"/>
+    <text x="0" y="20" font-family="Arial" font-size="12" text-anchor="middle" fill="#e03131">Background Noise</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="270" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">Speech-in-Noise Test</text>
+</svg>

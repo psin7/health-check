@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Head silhouette -->
+  <path d="M200,60 C240,60 270,90 270,140 C270,170 260,190 250,210 L240,240 L160,240 L150,210 C140,190 130,170 130,140 C130,90 160,60 200,60 Z" fill="#e6e6e6" stroke="#333" stroke-width="2"/>
+  
+  <!-- Ear -->
+  <path d="M270,140 C270,140 290,120 290,140 C290,160 280,180 270,180" fill="none" stroke="#333" stroke-width="3"/>
+  
+  <!-- Sound waves emanating from ear -->
+  <path d="M290,140 Q310,120 330,140" fill="none" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="2,2">
+    <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+  </path>
+  <path d="M290,140 Q315,140 340,140" fill="none" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="2,2">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1.8s" repeatCount="indefinite"/>
+  </path>
+  <path d="M290,140 Q310,160 330,140" fill="none" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="2,2">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="1.6s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Inner sound waves (tinnitus) -->
+  <circle cx="240" cy="140" r="15" fill="none" stroke="#ff6b6b" stroke-width="1.5">
+    <animate attributeName="r" values="10;20;10" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="240" cy="140" r="25" fill="none" stroke="#ff6b6b" stroke-width="1.5">
+    <animate attributeName="r" values="20;30;20" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="240" cy="140" r="35" fill="none" stroke="#ff6b6b" stroke-width="1.5">
+    <animate attributeName="r" values="30;40;30" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0.1;0.4" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Brain with activity -->
+  <ellipse cx="200" cy="110" rx="50" ry="40" fill="#f8d7da" stroke="#333" stroke-width="1.5"/>
+  <path d="M170,100 Q185,90 200,100 Q215,110 230,100" fill="none" stroke="#333" stroke-width="1.5"/>
+  <path d="M180,120 Q200,130 220,120" fill="none" stroke="#333" stroke-width="1.5"/>
+  
+  <!-- Neural pathway from ear to brain (animated) -->
+  <path d="M240,140 Q220,120 200,110" fill="none" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="4,2">
+    <animate attributeName="stroke-dashoffset" values="6;0;6" dur="2s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Text labels -->
+  <text x="200" y="270" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">Tinnitus Assessment</text>
+  <text x="330" y="120" font-family="Arial" font-size="12" text-anchor="middle" fill="#ff6b6b">Ringing</text>
+  <text x="330" y="140" font-family="Arial" font-size="12" text-anchor="middle" fill="#ff6b6b">Buzzing</text>
+  <text x="330" y="160" font-family="Arial" font-size="12" text-anchor="middle" fill="#ff6b6b">Hissing</text>
+</svg>

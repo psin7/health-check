@@ -39,7 +39,7 @@ const HearingTests = () => {
       id: 'tinnitus-assessment',
       title: 'Tinnitus Assessment',
       description: 'Evaluate the presence and impact of tinnitus (ringing, buzzing, or other sounds in the ears).',
-      image: 'https://images.unsplash.com/photo-1590077428593-a33a58b3a2c6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      image: '/images/hearing/tinnitus_assessment.svg',
       details: [
         'Helps identify tinnitus symptoms and severity',
         'Assesses impact on daily life and activities',
@@ -51,7 +51,7 @@ const HearingTests = () => {
       id: 'speech-in-noise',
       title: 'Speech-in-Noise Test',
       description: 'Assess your ability to understand speech in noisy environments, a common challenge for those with hearing difficulties.',
-      image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      image: '/images/hearing/speech_in_noise.svg',
       details: [
         'Simulates real-world listening environments',
         'Identifies specific challenges with background noise',
