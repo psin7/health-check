@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# Health Assessment App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Health Assessment App](https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80)
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+The Health Assessment App is a comprehensive web application designed to provide users with a variety of self-administered health screening tools. This application offers a suite of tests to assess different aspects of health, including vision, hearing, neurological function, and mental health.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Vision Tests
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Color Blindness Test (Ishihara)**: A series of 10 plates with embedded numbers to detect color vision deficiencies.
+- **Astigmatism Test**: Five patterns to help identify irregularities in cornea shape.
+- **Visual Acuity Test**: A simplified version of the Snellen chart to assess distance vision.
 
-### `npm test`
+### Hearing Tests
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Hearing Ability Assessment**: Evaluates hearing across different frequencies and listening situations.
+- **Tinnitus Assessment** (Coming Soon): Will help identify and assess tinnitus symptoms.
+- **Speech-in-Noise Test** (Coming Soon): Will assess the ability to understand speech in noisy environments.
 
-### `npm run build`
+### Neurological Tests
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Tests for ADHD, dyslexia, autism spectrum, and cognitive function (Coming Soon).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Mental Health Tests
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Screenings for depression, anxiety, bipolar disorder, PTSD, and OCD (Coming Soon).
 
-### `npm run eject`
+### Other Health Tests
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Tests for sleep apnea, diabetes risk, heart disease risk, and thyroid issues (Coming Soon).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### IQ Test
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Assessment of cognitive abilities and problem-solving skills (Coming Soon).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Technology Stack
 
-## Learn More
+- **Frontend**: React.js with Framer Motion for animations
+- **Styling**: Tailwind CSS for responsive design
+- **State Management**: React Hooks
+- **Visualization**: SVG images for test patterns and illustrations
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Key Components
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Test Engine**: A reusable component that powers all tests with standardized UI and scoring logic
+- **Custom SVG Images**: Over 25 custom SVG images for various tests
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
 
-### Code Splitting
+## Running the Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Prerequisites
 
-### Analyzing the Bundle Size
+- Node.js (v14.0.0 or later)
+- npm (v6.0.0 or later)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Installation
 
-### Making a Progressive Web App
+1. Clone the repository:
+   ```
+   git clone https://github.com/psin7/health-check.git
+   cd health-check
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-### Advanced Configuration
+3. Start the development server:
+   ```
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+4. Open your browser and navigate to:
+   ```
+   http://localhost:3000
+   ```
 
-### Deployment
+## Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To build the app for production:
 
-### `npm run build` fails to minify
+```
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This creates an optimized build in the `build` folder that can be deployed to any static hosting service.
+
+## License
+
+MIT
+
+## Acknowledgements
+
+- SVG illustrations created specifically for this application
+- Test methodologies based on established medical screening protocols
