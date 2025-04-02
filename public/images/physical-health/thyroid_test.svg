@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Thyroid Test</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#9C27B0" offset="0%"></stop>
+            <stop stop-color="#673AB7" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Thyroid-Test" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="800" height="600"></rect>
+        <g id="Thyroid-Icon" transform="translate(200, 100)">
+            <!-- Neck Outline -->
+            <path d="M200,50 C300,50 350,150 350,250 C350,350 300,450 200,450 C100,450 50,350 50,250 C50,150 100,50 200,50 Z" stroke="#673AB7" stroke-width="5" fill="#F3E5F5" fill-rule="nonzero"></path>
+            
+            <!-- Thyroid Gland -->
+            <path d="M150,200 C150,150 250,150 250,200 C250,250 270,300 200,300 C130,300 150,250 150,200 Z" fill="#9C27B0" fill-opacity="0.7" fill-rule="nonzero"></path>
+            
+            <!-- Trachea -->
+            <rect id="Trachea" fill="#E1BEE7" x="180" y="300" width="40" height="100" rx="20"></rect>
+            <line x1="200" y1="320" x2="200" y2="380" stroke="#9C27B0" stroke-width="2" stroke-dasharray="5,5"></line>
+            
+            <!-- Symptoms -->
+            <g id="Symptoms" transform="translate(350, 100)">
+                <!-- Fatigue -->
+                <circle id="Fatigue" fill="#E1BEE7" cx="0" cy="0" r="30"></circle>
+                <text font-family="Arial-BoldMT, Arial" font-size="12" font-weight="bold" fill="#4A4A4A" x="-20" y="5">
+                    Fatigue
+                </text>
+                
+                <!-- Weight Changes -->
+                <circle id="Weight" fill="#E1BEE7" cx="50" cy="50" r="25"></circle>
+                <text font-family="Arial-BoldMT, Arial" font-size="10" font-weight="bold" fill="#4A4A4A" x="30" y="55">
+                    Weight
+                </text>
+                
+                <!-- Temperature -->
+                <circle id="Temperature" fill="#E1BEE7" cx="-50" cy="50" r="25"></circle>
+                <text font-family="Arial-BoldMT, Arial" font-size="10" font-weight="bold" fill="#4A4A4A" x="-75" y="55">
+                    Temp
+                </text>
+                
+                <!-- Heart -->
+                <circle id="Heart" fill="#E1BEE7" cx="0" cy="100" r="25"></circle>
+                <text font-family="Arial-BoldMT, Arial" font-size="10" font-weight="bold" fill="#4A4A4A" x="-15" y="105">
+                    Heart
+                </text>
+            </g>
+            
+            <!-- Arrows -->
+            <path d="M250,200 C300,200 320,150 350,150" stroke="#9C27B0" stroke-width="2" fill="none" stroke-dasharray="5,5"></path>
+            <path d="M250,220 C300,220 320,200 400,200" stroke="#9C27B0" stroke-width="2" fill="none" stroke-dasharray="5,5"></path>
+            <path d="M250,240 C300,240 320,250 300,250" stroke="#9C27B0" stroke-width="2" fill="none" stroke-dasharray="5,5"></path>
+            <path d="M200,300 C200,320 250,350 350,350" stroke="#9C27B0" stroke-width="2" fill="none" stroke-dasharray="5,5"></path>
+            
+            <!-- Hypo/Hyper Labels -->
+            <rect id="HypoLabel" fill="#E1BEE7" x="50" y="50" width="100" height="30" rx="15"></rect>
+            <text font-family="Arial-BoldMT, Arial" font-size="12" font-weight="bold" fill="#4A4A4A" x="55" y="70">
+                Hypothyroid
+            </text>
+            
+            <rect id="HyperLabel" fill="#E1BEE7" x="250" y="50" width="100" height="30" rx="15"></rect>
+            <text font-family="Arial-BoldMT, Arial" font-size="12" font-weight="bold" fill="#4A4A4A" x="255" y="70">
+                Hyperthyroid
+            </text>
+        </g>
+    </g>
+</svg>

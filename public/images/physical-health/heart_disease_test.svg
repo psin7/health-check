@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="150" cy="150" r="145" fill="#f8f0f0" stroke="#e63946" stroke-width="2"/>
+  
+  <!-- Anatomical Heart Shape -->
+  <g transform="translate(100, 80) scale(1.5)">
+    <!-- Main Heart Body -->
+    <path d="M67,20 C67,20 80,0 100,0 C130,0 130,30 130,30 C130,30 130,0 160,0 C180,0 193,20 193,20 C193,20 200,40 200,60 C200,100 130,140 130,140 C130,140 60,100 60,60 C60,40 67,20 67,20 Z" 
+          fill="#e63946" stroke="#b31b27" stroke-width="2"/>
+    
+    <!-- Aorta and Pulmonary Artery -->
+    <path d="M120,15 C120,15 120,0 140,-10 M140,15 C140,15 140,0 160,-10" 
+          stroke="#b31b27" stroke-width="3" fill="none"/>
+    
+    <!-- Heart Chambers -->
+    <path d="M100,50 C100,50 120,70 130,70 C140,70 160,50 160,50" 
+          stroke="#b31b27" stroke-width="2" fill="none"/>
+    <path d="M90,30 C90,30 110,40 130,40 C150,40 170,30 170,30" 
+          stroke="#b31b27" stroke-width="2" fill="none"/>
+    
+    <!-- Coronary Arteries -->
+    <path d="M80,30 C80,30 70,40 70,50 M180,30 C180,30 190,40 190,50" 
+          stroke="#b31b27" stroke-width="1.5" fill="none"/>
+  </g>
+  
+  <!-- EKG Line -->
+  <path d="M30,220 L60,220 L70,190 L80,250 L90,200 L100,230 L110,220 L120,160 L130,220 L140,210 L150,220 L160,215 L170,220 L270,220" 
+        stroke="#2a9d8f" stroke-width="3" fill="none"/>
+  
+  <!-- Risk Calculator Elements -->
+  <g transform="translate(220, 70)">
+    <!-- Calculator Icon -->
+    <rect x="0" y="0" width="40" height="50" rx="5" fill="#457b9d" stroke="#1d3557" stroke-width="1.5"/>
+    <rect x="5" y="5" width="30" height="10" rx="2" fill="#f1faee" stroke="#1d3557" stroke-width="0.5"/>
+    
+    <!-- Calculator Buttons -->
+    <circle cx="10" cy="25" r="5" fill="#f1faee" stroke="#1d3557" stroke-width="0.5"/>
+    <circle cx="20" cy="25" r="5" fill="#f1faee" stroke="#1d3557" stroke-width="0.5"/>
+    <circle cx="30" cy="25" r="5" fill="#f1faee" stroke="#1d3557" stroke-width="0.5"/>
+    
+    <circle cx="10" cy="40" r="5" fill="#f1faee" stroke="#1d3557" stroke-width="0.5"/>
+    <circle cx="20" cy="40" r="5" fill="#f1faee" stroke="#1d3557" stroke-width="0.5"/>
+    <circle cx="30" cy="40" r="5" fill="#e63946" stroke="#b31b27" stroke-width="0.5"/>
+    
+    <!-- Percentage Symbol -->
+    <text x="20" y="28" font-family="Arial" font-size="8" text-anchor="middle" fill="#1d3557">%</text>
+  </g>
+  
+  <!-- Blood Pressure Icon -->
+  <g transform="translate(40, 70)">
+    <circle cx="0" cy="0" r="20" fill="#f4a261" stroke="#e76f51" stroke-width="1.5"/>
+    <path d="M-10,-5 L0,5 L10,-5" stroke="#1d3557" stroke-width="2" fill="none"/>
+    <path d="M-10,5 L0,15 L10,5" stroke="#1d3557" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Cholesterol Icon -->
+  <g transform="translate(40, 140)">
+    <circle cx="0" cy="0" r="15" fill="#ffb703" stroke="#fb8500" stroke-width="1.5"/>
+    <text x="0" y="4" font-family="Arial" font-size="12" font-weight="bold" text-anchor="middle" fill="#1d3557">LDL</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="150" y="270" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#1d3557">Heart Disease Risk Calculator</text>
+</svg>

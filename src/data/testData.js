@@ -484,94 +484,350 @@ export const astigmatismTest = {
   ]
 };
 
-// IQ Test (Simplified)
+// Professional Standard IQ Test
 export const iqTest = {
   id: 'iq-test',
-  title: 'IQ Test (Simplified)',
+  title: 'Professional-Grade IQ Assessment',
   category: 'Cognitive',
-  description: 'A simplified IQ test to assess different aspects of cognitive ability.',
-  instructions: 'Select the best answer for each question. There is no time limit, but try to answer at a steady pace.',
+  description: 'A comprehensive assessment of cognitive abilities based on professional IQ test standards including verbal comprehension, perceptual reasoning, working memory, processing speed, and fluid intelligence.',
+  instructions: 'This test assesses multiple cognitive domains similar to professional IQ tests. Select the best answer for each question. Try to answer at a steady pace without rushing for the most accurate results. The test will take approximately 20-30 minutes to complete.',
   questions: [
+    // Verbal Comprehension Domain
     {
       id: 1,
-      text: 'What comes next in this sequence? 2, 4, 8, 16, ...',
-      correctAnswer: '32'
+      text: 'What is the relationship between "democracy" and "government"?',
+      options: [
+        'Democracy is a type of government',
+        'Government is a type of democracy',
+        'They are unrelated concepts',
+        'They are identical concepts'
+      ],
+      correctAnswer: 'Democracy is a type of government',
+      domain: 'Verbal Comprehension'
     },
     {
       id: 2,
-      text: 'Identify the word that does not belong: Apple, Banana, Carrot, Grape',
-      correctAnswer: 'Carrot'
+      text: 'What do the words "frugal" and "economical" have in common?',
+      options: [
+        'They are opposites',
+        'They both relate to saving money',
+        'They both relate to time management',
+        'They have no relationship'
+      ],
+      correctAnswer: 'They both relate to saving money',
+      domain: 'Verbal Comprehension'
     },
     {
       id: 3,
-      text: 'If a square is folded along its diagonal, what shape will it form?',
-      correctAnswer: 'Triangle'
+      text: 'Complete the analogy: Book is to Reading as Fork is to:',
+      options: [
+        'Kitchen',
+        'Eating',
+        'Cooking',
+        'Utensil'
+      ],
+      correctAnswer: 'Eating',
+      domain: 'Verbal Comprehension'
     },
     {
       id: 4,
-      text: 'All roses have thorns. Some flowers are roses. Therefore:',
-      correctAnswer: 'Some flowers have thorns'
+      text: 'Which of these words is most different from the others?',
+      options: [
+        'Hesitant',
+        'Reluctant',
+        'Decisive',
+        'Tentative'
+      ],
+      correctAnswer: 'Decisive',
+      domain: 'Verbal Comprehension'
     },
     {
       id: 5,
-      text: 'What number should replace the question mark? 1, 4, 9, 16, 25, ?',
-      correctAnswer: '36'
+      text: 'What does the proverb "Don\'t count your chickens before they hatch" mean?',
+      options: [
+        'Be careful when counting farm animals',
+        'Don\'t rely on something before it\'s certain',
+        'Farming requires patience and careful planning',
+        'Always count everything twice to be sure'
+      ],
+      correctAnswer: 'Don\'t rely on something before it\'s certain',
+      domain: 'Verbal Comprehension'
+    },
+    
+    // Perceptual Reasoning Domain
+    {
+      id: 6,
+      text: 'Which figure completes the pattern?',
+      imageUrl: '/images/iq-test/pattern1.svg',
+      options: [
+        'A',
+        'B',
+        'C',
+        'D'
+      ],
+      correctAnswer: 'C',
+      domain: 'Perceptual Reasoning'
+    },
+    {
+      id: 7,
+      text: 'What number should come next in this sequence?',
+      imageUrl: '/images/iq-test/pattern2.svg',
+      options: [
+        'A',
+        'B',
+        'C',
+        'D'
+      ],
+      correctAnswer: 'C',  // 13 (Fibonacci sequence)
+      domain: 'Perceptual Reasoning'
+    },
+    {
+      id: 8,
+      text: 'Which figure belongs in the empty cell to complete the pattern?',
+      imageUrl: '/images/iq-test/pattern3.svg',
+      options: [
+        'A',
+        'B',
+        'C',
+        'D'
+      ],
+      correctAnswer: 'C',  // Green triangle
+      domain: 'Perceptual Reasoning'
+    },
+    {
+      id: 9,
+      text: 'Which shape should come next in this logical sequence?',
+      imageUrl: '/images/iq-test/pattern4.svg',
+      options: [
+        'A',
+        'B',
+        'C',
+        'D'
+      ],
+      correctAnswer: 'C',  // Empty square
+      domain: 'Perceptual Reasoning'
+    },
+    {
+      id: 10,
+      text: 'If a square has an area of 16 square inches, what is the length of its diagonal?',
+      options: [
+        '4 inches',
+        '5.66 inches',
+        '8 inches',
+        '4.25 inches'
+      ],
+      correctAnswer: '5.66 inches',  // √32 = 4√2 ≈ 5.66
+      domain: 'Perceptual Reasoning'
+    },
+    
+    // Working Memory Domain
+    {
+      id: 11,
+      text: 'Read this sequence once, then select which number would be in the 7th position if you continued the pattern: 2, 5, 8, 11, 14, 17, ...',
+      options: [
+        '19',
+        '20',
+        '21',
+        '23'
+      ],
+      correctAnswer: '20',  // +3 pattern
+      domain: 'Working Memory'
+    },
+    {
+      id: 12,
+      text: 'Rearrange these letters to form a word, then select the category it belongs to: AETRW',
+      options: [
+        'Animal',
+        'Food',
+        'Nature',
+        'Household item'
+      ],
+      correctAnswer: 'Nature',  // WATER
+      domain: 'Working Memory'
+    },
+    {
+      id: 13,
+      text: 'If you count backward from 100 by 7, which of these numbers would you say?',
+      options: [
+        '97',
+        '93',
+        '86',
+        '79'
+      ],
+      correctAnswer: '79',  // 100, 93, 86, 79
+      domain: 'Working Memory'
+    },
+    {
+      id: 14,
+      text: 'Remember this sequence: 7-2-8-3-9-5-1. What is the sum of the 2nd and 6th numbers?',
+      options: [
+        '6',
+        '7',
+        '10',
+        '11'
+      ],
+      correctAnswer: '7',  // 2 + 5 = 7
+      domain: 'Working Memory'
+    },
+    
+    // Processing Speed Domain
+    {
+      id: 15,
+      text: 'Which symbol appears most frequently in this sequence? @#$%@#@&%@#$@',
+      options: [
+        '@',
+        '#',
+        '$',
+        '%'
+      ],
+      correctAnswer: '@',  // 5 times
+      domain: 'Processing Speed'
+    },
+    {
+      id: 16,
+      text: 'If today is Tuesday, what day will it be 100 days from now?',
+      options: [
+        'Monday',
+        'Tuesday',
+        'Wednesday',
+        'Thursday'
+      ],
+      correctAnswer: 'Tuesday',  // 100 ÷ 7 = 14 remainder 2, so 2 days later = same day
+      domain: 'Processing Speed'
+    },
+    {
+      id: 17,
+      text: 'Find the next number in the sequence: 1, 4, 9, 16, 25, 36, ...',
+      options: [
+        '42',
+        '49',
+        '54',
+        '64'
+      ],
+      correctAnswer: '49',  // 7² = 49 (sequence of squares)
+      domain: 'Processing Speed'
+    },
+    
+    // Fluid Intelligence
+    {
+      id: 18,
+      text: 'All roses have thorns. Some flowers are roses. Therefore:',
+      options: [
+        'All flowers have thorns',
+        'Some flowers have thorns',
+        'No flowers have thorns',
+        'Cannot be determined'
+      ],
+      correctAnswer: 'Some flowers have thorns',
+      domain: 'Fluid Intelligence'
+    },
+    {
+      id: 19,
+      text: 'Which word does not belong in this group?',
+      options: [
+        'Apple',
+        'Banana',
+        'Carrot',
+        'Grape'
+      ],
+      correctAnswer: 'Carrot',  // Not a fruit
+      domain: 'Fluid Intelligence'
+    },
+    {
+      id: 20,
+      text: 'If it takes 5 machines 5 minutes to make 5 widgets, how long would it take 100 machines to make 100 widgets?',
+      options: [
+        '5 minutes',
+        '20 minutes',
+        '100 minutes',
+        '500 minutes'
+      ],
+      correctAnswer: '5 minutes',
+      domain: 'Fluid Intelligence'
     }
   ],
   answerOptions: [
-    { text: 'Option A', score: 0 },
-    { text: 'Option B', score: 0 },
-    { text: 'Option C', score: 0 },
-    { text: 'Option D', score: 0 }
+    { text: 'A', score: 1 },
+    { text: 'B', score: 1 },
+    { text: 'C', score: 1 },
+    { text: 'D', score: 1 }
   ],
   resultCategories: [
     {
       minScore: 0,
-      maxScore: 1,
-      title: 'Below Average',
+      maxScore: 10,
+      iqRange: '70-84',
+      title: 'Below Average IQ Range (70-84)',
       icon: '🧠',
       color: 'bg-blue-100 text-blue-800',
-      description: 'Your performance on this simplified test was below average. Remember that this is just a brief screening and not a comprehensive assessment.',
+      description: 'Your performance suggests cognitive abilities in the below average range. This corresponds to approximately 14% of the population. Remember that IQ is just one measure of ability and doesn\'t reflect your full potential or capabilities in many important areas of life.',
       recommendations: [
-        'Consider brain training exercises and puzzles',
-        'Reading regularly can help improve cognitive abilities',
-        'Ensure you\'re getting adequate sleep and nutrition',
-        'A full IQ test administered by a professional would provide more accurate results'
+        'Consider specialized learning strategies that leverage your personal strengths',
+        'Regular reading and vocabulary building can help improve verbal comprehension',
+        'Practice puzzles, spatial tasks and pattern recognition for perceptual reasoning',
+        'Memory games and concentration exercises can help enhance working memory capacity',
+        'Ensure adequate sleep, nutrition, and physical exercise, which all support cognitive function',
+        'A professional assessment would provide more detailed insights into your cognitive profile'
       ],
-      disclaimer: 'This simplified test is not a substitute for a professionally administered IQ test. Many factors can affect test performance including stress, fatigue, and familiarity with test formats.',
+      disclaimer: 'This online assessment is not equivalent to a professionally administered IQ test. Many factors can affect test performance including stress, fatigue, testing environment, and familiarity with test formats. This test should not be used for diagnostic purposes or making important life decisions.',
       alertLevel: 'bg-blue-50 text-blue-800'
     },
     {
-      minScore: 2,
-      maxScore: 3,
-      title: 'Average',
+      minScore: 11,
+      maxScore: 14,
+      iqRange: '85-99',
+      title: 'Low Average IQ Range (85-99)',
       icon: '🧠',
       color: 'bg-green-100 text-green-800',
-      description: 'Your performance on this simplified test was average. This suggests typical cognitive functioning in the areas tested.',
+      description: 'Your performance suggests cognitive abilities in the low average range. This corresponds to approximately 34% of the population. While slightly below the statistical mean, this range indicates functional cognitive abilities for most everyday tasks and many professional roles.',
       recommendations: [
-        'Continue engaging in mentally stimulating activities',
-        'Consider diverse cognitive challenges like puzzles, reading, and learning new skills',
+        'Continue engaging in diverse mentally stimulating activities',
+        'Challenge yourself with new learning experiences to build cognitive reserve',
+        'Consider activities that target different cognitive domains (verbal, spatial, memory, etc.)',
+        'Skill-based learning (e.g., musical instruments, languages, technical skills) can enhance cognitive functioning',
         'Maintain a healthy lifestyle with regular exercise and good nutrition',
-        'Remember that cognitive abilities can be improved with practice'
+        'Remember that cognitive abilities can be improved with consistent practice and challenge'
       ],
-      disclaimer: 'This simplified test is not a substitute for a professionally administered IQ test. Many factors can affect test performance including stress, fatigue, and familiarity with test formats.',
+      disclaimer: 'This online assessment is not equivalent to a professionally administered IQ test. Many factors can affect test performance including stress, fatigue, testing environment, and familiarity with test formats. This test should not be used for diagnostic purposes or making important life decisions.',
       alertLevel: 'bg-green-50 text-green-800'
     },
     {
-      minScore: 4,
-      maxScore: 5,
-      title: 'Above Average',
+      minScore: 15,
+      maxScore: 17,
+      iqRange: '100-114',
+      title: 'Average IQ Range (100-114)',
       icon: '🧠',
-      color: 'bg-purple-100 text-purple-800',
-      description: 'Your performance on this simplified test was above average. This suggests strong cognitive abilities in the areas tested.',
+      color: 'bg-teal-100 text-teal-800',
+      description: 'Your performance suggests cognitive abilities in the average to high average range. This corresponds to approximately 34% of the population. This range indicates solid cognitive abilities that are well-suited for most academic and professional pursuits.',
       recommendations: [
-        'Continue challenging yourself with complex problems and puzzles',
-        'Consider activities that use different types of intelligence',
-        'Share your cognitive strengths through teaching or mentoring others',
-        'Explore new fields of knowledge to further expand your cognitive abilities'
+        'Leverage your cognitive abilities by exploring intellectually stimulating activities',
+        'Challenge yourself with increasingly complex problems to build on your strengths',
+        'Consider activities that further develop your cognitive strengths while addressing any relative weaknesses',
+        'Interdisciplinary learning can help you make creative connections between different knowledge domains',
+        'Consider teaching others as a way to solidify and deepen your own understanding',
+        'Explore new fields that interest you - your cognitive profile suggests you can succeed in many areas'
       ],
-      disclaimer: 'This simplified test is not a substitute for a professionally administered IQ test. Many factors can affect test performance including stress, fatigue, and familiarity with test formats.',
-      alertLevel: 'bg-purple-50 text-purple-800'
+      disclaimer: 'This online assessment is not equivalent to a professionally administered IQ test. Many factors can affect test performance including stress, fatigue, testing environment, and familiarity with test formats. This test should not be used for diagnostic purposes or making important life decisions.',
+      alertLevel: 'bg-teal-50 text-teal-800'
+    },
+    {
+      minScore: 18,
+      maxScore: 20,
+      iqRange: '115-130+',
+      title: 'Superior IQ Range (115-130+)',
+      icon: '🧠',
+      color: 'bg-indigo-100 text-indigo-800',
+      description: 'Your performance suggests cognitive abilities in the superior to very superior range. This corresponds to approximately 14% or less of the population. This range indicates exceptional cognitive abilities that can excel in demanding intellectual pursuits.',
+      recommendations: [
+        'Seek out intellectually stimulating environments and complex challenges',
+        'Consider joining groups like Mensa or other high-IQ societies',
+        'Explore advanced academic or professional fields that match your cognitive strengths',
+        'Consider how your cognitive abilities can be applied to solve meaningful problems',
+        'Develop metacognitive skills to optimize your learning and problem-solving',
+        'Remember that emotional intelligence and practical skills are also important for overall success'
+      ],
+      disclaimer: 'This online assessment is not equivalent to a professionally administered IQ test. Many factors can affect test performance including stress, fatigue, testing environment, and familiarity with test formats. This test should not be used for diagnostic purposes or making important life decisions.',
+      alertLevel: 'bg-indigo-50 text-indigo-800'
     }
   ]
 };
@@ -1036,6 +1292,120 @@ export const adhdTest = {
   ]
 };
 
+// Dyslexia Screening Test
+export const dyslexiaTest = {
+  id: 'dyslexia',
+  title: 'Dyslexia Screening Test',
+  category: 'Neurological',
+  description: 'A comprehensive screening tool to assess risk factors and symptoms associated with dyslexia.',
+  instructions: 'Answer each question based on your experiences or observations. Choose the option that best applies to you or the person you are assessing.',
+  questions: [
+    {
+      id: 1,
+      text: 'Difficulty with reading fluently or reading well below the expected level for age',
+    },
+    {
+      id: 2,
+      text: 'Problems with spelling, including inconsistent spelling of the same word',
+    },
+    {
+      id: 3,
+      text: 'Difficulty sounding out unfamiliar words (phonetic decoding)',
+    },
+    {
+      id: 4,
+      text: 'Slow reading and writing that requires extra time and effort',
+    },
+    {
+      id: 5,
+      text: 'Avoiding activities that involve reading or writing',
+    },
+    {
+      id: 6,
+      text: 'Mispronouncing words or names, or trouble retrieving the right word when speaking',
+    },
+    {
+      id: 7,
+      text: 'Difficulty remembering sequences or following multi-step instructions',
+    },
+    {
+      id: 8,
+      text: 'Confusing or reversing similar-looking letters or numbers (like b/d, p/q, 6/9)',
+    },
+    {
+      id: 9,
+      text: 'Struggling with rhyming words or identifying sounds in words',
+    },
+    {
+      id: 10,
+      text: 'Trouble learning a foreign language or solving math word problems',
+    },
+    {
+      id: 11,
+      text: 'Family history of reading or learning difficulties',
+    },
+    {
+      id: 12,
+      text: 'Strong skills in areas not dependent on reading (like problem-solving, creativity, or spatial awareness)',
+    }
+  ],
+  answerOptions: [
+    { text: 'Not at all', score: 0 },
+    { text: 'Sometimes', score: 1 },
+    { text: 'Frequently', score: 2 }
+  ],
+  resultCategories: [
+    {
+      minScore: 0,
+      maxScore: 7,
+      title: 'Low Likelihood of Dyslexia',
+      icon: '📚',
+      color: 'bg-green-100 text-green-800',
+      description: 'Your responses suggest a low likelihood of dyslexia. You seem to have few or no significant difficulties with reading, spelling, or language processing.',
+      recommendations: [
+        'Continue to engage with reading and writing regularly',
+        'If you have any specific concerns about certain reading or language tasks, consider discussing them with an educator',
+        'Monitor for any changes in reading or writing abilities',
+        'Maintain good reading habits like reading in a well-lit environment and taking breaks when needed'
+      ],
+      disclaimer: 'This is a screening tool only and does not provide a diagnosis. If you have specific concerns, please consult with an educational psychologist or learning specialist.',
+      alertLevel: 'bg-green-50 text-green-800'
+    },
+    {
+      minScore: 8,
+      maxScore: 15,
+      title: 'Moderate Likelihood of Dyslexia',
+      icon: '📖',
+      color: 'bg-yellow-100 text-yellow-800',
+      description: 'Your responses suggest a moderate likelihood of dyslexia. You may be experiencing some challenges with reading, spelling, or language processing that could be associated with dyslexia.',
+      recommendations: [
+        'Consider scheduling an assessment with an educational psychologist or learning specialist',
+        'Discuss your reading challenges with teachers, employers, or support services',
+        'Explore reading strategies such as using larger text, different fonts, or text-to-speech tools',
+        'Allow yourself extra time for reading and writing tasks'
+      ],
+      disclaimer: 'This screening suggests you may benefit from a professional evaluation. This tool does not provide a diagnosis of dyslexia.',
+      alertLevel: 'bg-yellow-50 text-yellow-800'
+    },
+    {
+      minScore: 16,
+      maxScore: 24,
+      title: 'High Likelihood of Dyslexia',
+      icon: '🔍',
+      color: 'bg-red-100 text-red-800',
+      description: 'Your responses suggest a high likelihood of dyslexia. You appear to be experiencing significant difficulties with reading, spelling, and language processing that are commonly associated with dyslexia.',
+      recommendations: [
+        'Seek a comprehensive evaluation from an educational psychologist or specialist in learning disabilities',
+        'Look into accommodations available at school, university, or workplace (like extra time, assistive technology)',
+        'Explore evidence-based interventions such as structured literacy programs',
+        'Connect with dyslexia support organizations for resources and community'
+      ],
+      disclaimer: 'This screening indicates a strong possibility of dyslexia, but a formal diagnosis requires professional assessment. Many people with dyslexia are highly intelligent and creative, with dyslexia affecting only specific aspects of learning.',
+      alertLevel: 'bg-red-50 text-red-800'
+    }
+  ]
+};
+
 // Export all tests
 export const allTests = {
   depression: depressionTest,
@@ -1045,5 +1415,6 @@ export const allTests = {
   visualAcuity: visualAcuityTest,
   hearing: hearingTest,
   iq: iqTest,
-  adhd: adhdTest
+  adhd: adhdTest,
+  dyslexia: dyslexiaTest
 };

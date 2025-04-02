@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import TestEngine from '../components/TestEngine';
-import { iqTest } from '../data/testData';
+import { iqTest } from '../data/tests';
 
 const IQTest = () => {
   const [activeTest, setActiveTest] = useState(null);

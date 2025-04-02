@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import TestEngine from '../components/TestEngine';
-import { hearingTest } from '../data/testData';
+import { hearingTest } from '../data/tests';
 import { motion } from 'framer-motion';
 
 const HearingTests = () => {

@@ -29,6 +29,22 @@ const TestEngine = ({ test, onClose }) => {
         { text: 'I don\'t see any number', score: 0 }
       ];
       setRandomizedOptions(shuffleArray(options));
+    } else if (test.id === 'iq-test' || test.id === 'memory-test') {
+      // For IQ test and memory test, use the options provided in the question
+      if (test.questions[currentQuestion].options) {
+        const options = test.questions[currentQuestion].options.map((optionText, index) => {
+          // Check if this option is the correct answer
+          const isCorrect = optionText === test.questions[currentQuestion].correctAnswer;
+          return {
+            text: optionText,
+            score: isCorrect ? 1 : 0
+          };
+        });
+        setRandomizedOptions(shuffleArray(options));
+      }
+    } else if (test.customAnswerOptions && test.customAnswerOptions[test.questions[currentQuestion].id]) {
+      // For tests with custom answer options per question (like diabetes test)
+      setRandomizedOptions(test.customAnswerOptions[test.questions[currentQuestion].id]);
     }
   }, [currentQuestion, test.id, test.questions]);
 
@@ -43,14 +59,72 @@ const TestEngine = ({ test, onClose }) => {
       const totalScore = newAnswers.reduce((sum, score) => sum + score, 0);
       
       // Find the appropriate result category
-      const resultCategory = test.resultCategories.find(
-        category => totalScore >= category.minScore && totalScore <= category.maxScore
-      );
+      let resultCategory;
+      
+      // Special handling for thyroid test which has different result categories based on pattern
+      if (test.id === 'thyroid' && test.processResults) {
+        const processedResult = test.processResults(newAnswers);
+        
+        // Find the appropriate category based on score and type
+        resultCategory = test.resultCategories.find(category => {
+          // Check if the category title includes the processed result type
+          const matchesType = category.title.toLowerCase().includes(processedResult.type);
+          // Check if the score is within range
+          const inRange = processedResult.score >= category.minScore && processedResult.score <= category.maxScore;
+          
+          // For the general categories (Minimal or Mild), don't check type
+          if (category.title.includes('Minimal') || category.title.includes('Mild')) {
+            return inRange;
+          }
+          
+          // For Moderate and Significant categories, check both type and range
+          return matchesType && inRange;
+        });
+      } 
+      // Special handling for heart disease test which uses a custom risk calculator
+      else if (test.id === 'heart-disease' && test.calculateRisk) {
+        const riskResult = test.calculateRisk(newAnswers);
+        
+        // Find the appropriate category based on score
+        resultCategory = test.resultCategories.find(category => 
+          riskResult.score >= category.minScore && riskResult.score <= category.maxScore
+        );
+        
+        // Add the risk percentage to the result for display
+        if (resultCategory) {
+          resultCategory = {
+            ...resultCategory,
+            riskPercentage: riskResult.riskPercentage
+          };
+        }
+      } else {
+        // Standard result category finding for other tests
+        resultCategory = test.resultCategories.find(
+          category => totalScore >= category.minScore && totalScore <= category.maxScore
+        );
+      }
+      
+      // Calculate max possible score based on test type
+      let maxPossibleScore;
+      if (test.customAnswerOptions) {
+        // For tests with custom answer options, calculate the max possible score
+        maxPossibleScore = test.questions.reduce((total, question) => {
+          const options = test.customAnswerOptions[question.id] || [];
+          const maxScore = options.length > 0 ? Math.max(...options.map(option => option.score)) : 0;
+          return total + maxScore;
+        }, 0);
+      } else if (test.answerOptions) {
+        // For tests with standard answer options
+        maxPossibleScore = test.questions.length * Math.max(...test.answerOptions.map(option => option.score));
+      } else {
+        // Default to total questions if no other scoring method is available
+        maxPossibleScore = test.questions.length;
+      }
       
       setResult({
         score: totalScore,
         category: resultCategory,
-        maxPossibleScore: test.questions.length * Math.max(...test.answerOptions.map(option => option.score))
+        maxPossibleScore: maxPossibleScore
       });
       
       setTestCompleted(true);
@@ -156,7 +230,8 @@ const TestEngine = ({ test, onClose }) => {
                 animate="visible"
                 className="space-y-4"
               >
-                {test.id === 'color-blindness' ? (
+                {/* For tests with custom answer options per question (like diabetes) */}
+                {test.customAnswerOptions ? (
                   <>
                     {randomizedOptions.map((option, index) => (
                       <motion.button
@@ -168,6 +243,24 @@ const TestEngine = ({ test, onClose }) => {
                         onClick={() => handleAnswer(option.score)}
                       >
                         {option.text}
+                      </motion.button>
+                    ))}
+                  </>
+                ) : test.id === 'color-blindness' || test.id === 'iq-test' || test.id === 'memory-test' ? (
+                  <>
+                    {randomizedOptions.map((option, index) => (
+                      <motion.button
+                        key={index}
+                        variants={itemVariants}
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                        className="w-full text-left p-4 border border-gray-200 rounded-lg hover:bg-primary-50 transition-colors"
+                        onClick={() => handleAnswer(option.score)}
+                      >
+                        {(test.id === 'iq-test' || test.id === 'memory-test') ? 
+                          (test.answerOptions[index] ? `${test.answerOptions[index].text}. ${option.text}` : option.text) : 
+                          option.text
+                        }
                       </motion.button>
                     ))}
                   </>
@@ -197,7 +290,11 @@ const TestEngine = ({ test, onClose }) => {
                 </div>
                 <h3 className="text-2xl font-bold mb-2">{result.category.title}</h3>
                 <p className="text-gray-600 mb-4">
-                  Your score: {result.score} out of {result.maxPossibleScore}
+                  {test.id === 'heart-disease' && result.category.riskPercentage ? (
+                    <>Your 10-year risk: <span className="font-semibold">{result.category.riskPercentage}</span></>
+                  ) : (
+                    <>Your score: {result.score} out of {result.maxPossibleScore}</>
+                  )}
                 </p>
               </div>
               

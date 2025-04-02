@@ -10,6 +10,8 @@ import NeurologicalTests from './pages/NeurologicalTests';
 import MentalHealthTests from './pages/MentalHealthTests';
 import OtherHealthTests from './pages/OtherHealthTests';
 import IQTest from './pages/IQTest';
+import ImageTestPage from './pages/ImageTestPage';
+// Memory Cognitive Test has been removed
 
 // Components
 import Navbar from './components/Navbar';
@@ -34,6 +36,8 @@ function App() {
             <Route path="/mental-health-tests" element={<MentalHealthTests />} />
             <Route path="/other-health-tests" element={<OtherHealthTests />} />
             <Route path="/iq-test" element={<IQTest />} />
+            <Route path="/image-test" element={<ImageTestPage />} />
+            {/* Memory Cognitive Test route has been removed */}
           </Routes>
         </motion.main>
         <Footer />

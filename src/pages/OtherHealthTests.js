@@ -1,13 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import TestEngine from '../components/TestEngine';
+import { sleepApneaTest, diabetesTest, thyroidTest, heartDiseaseTest } from '../data/tests';
 
 const OtherHealthTests = () => {
+  const [activeTest, setActiveTest] = useState(null);
+
+  const startTest = (testId) => {
+    let test;
+    switch(testId) {
+      case 'sleep-apnea':
+        test = sleepApneaTest;
+        break;
+      case 'diabetes':
+        test = diabetesTest;
+        break;
+      case 'thyroid':
+        test = thyroidTest;
+        break;
+      case 'heart-disease':
+        test = heartDiseaseTest;
+        break;
+      default:
+        return; // Test not implemented yet
+    }
+    setActiveTest(test);
+  };
+
+  const closeTest = () => {
+    setActiveTest(null);
+  };
   const tests = [
     {
       id: 'sleep-apnea',
       title: 'Sleep Apnea Risk Assessment (STOP-BANG)',
       description: 'A screening tool to identify risk factors for obstructive sleep apnea.',
-      image: 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      image: sleepApneaTest.imageUrl,
       details: [
         'Evaluates snoring, tiredness, observed apnea, and blood pressure',
         'Takes approximately 2-3 minutes to complete',
@@ -18,7 +46,7 @@ const OtherHealthTests = () => {
       id: 'diabetes',
       title: 'Diabetes Risk Test',
       description: 'Based on the American Diabetes Association risk assessment to identify your risk of developing type 2 diabetes.',
-      image: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      image: diabetesTest.imageUrl,
       details: [
         'Considers factors like age, weight, family history, and activity level',
         'Takes approximately 2 minutes to complete',
@@ -29,7 +57,7 @@ const OtherHealthTests = () => {
       id: 'heart-disease',
       title: 'Heart Disease Risk Calculator',
       description: 'Evaluates your risk of developing cardiovascular disease based on lifestyle and medical history.',
-      image: 'https://images.unsplash.com/photo-1559757175-7cb036bd7d31?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      image: heartDiseaseTest.imageUrl,
       details: [
         'Considers factors like cholesterol, blood pressure, and family history',
         'Takes approximately 5 minutes to complete',
@@ -40,7 +68,7 @@ const OtherHealthTests = () => {
       id: 'thyroid',
       title: 'Thyroid Symptom Assessment',
       description: 'A symptom-based self-assessment to identify potential thyroid dysfunction.',
-      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+      image: thyroidTest.imageUrl,
       details: [
         'Evaluates common symptoms of hypothyroidism and hyperthyroidism',
         'Takes approximately 3-4 minutes to complete',
@@ -99,9 +127,13 @@ const OtherHealthTests = () => {
           >
             <div className="md:w-1/3">
               <img 
-                src={test.image} 
+                src={process.env.PUBLIC_URL + test.image} 
                 alt={test.title} 
                 className="h-48 md:h-full w-full object-cover"
+                onError={(e) => {
+                  console.error(`Error loading image: ${test.image}`);
+                  e.target.src = `${process.env.PUBLIC_URL}/images/placeholder.svg`;
+                }}
               />
             </div>
             <div className="md:w-2/3 p-6">
@@ -119,8 +151,9 @@ const OtherHealthTests = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="btn-secondary"
+                onClick={() => startTest(test.id)}
               >
-                Start Test
+                {(test.id === 'sleep-apnea' || test.id === 'diabetes' || test.id === 'thyroid' || test.id === 'heart-disease') ? 'Start Test' : 'Coming Soon'}
               </motion.button>
             </div>
           </motion.div>
@@ -164,6 +197,10 @@ const OtherHealthTests = () => {
           </li>
         </ul>
       </motion.div>
+
+      {activeTest && (
+        <TestEngine test={activeTest} onClose={closeTest} />
+      )}
     </div>
   );
 };

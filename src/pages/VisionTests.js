@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import TestEngine from '../components/TestEngine';
-import { colorBlindnessTest, astigmatismTest, visualAcuityTest } from '../data/testData';
+import { colorBlindnessTest, astigmatismTest, visualAcuityTest } from '../data/tests';
 import { motion } from 'framer-motion';
 
 const VisionTests = () => {

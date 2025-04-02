@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Sleep Apnea Test</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#6B7DB3" offset="0%"></stop>
+            <stop stop-color="#3F51B5" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Sleep-Apnea-Test" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="800" height="600"></rect>
+        <g id="Sleep-Apnea-Icon" transform="translate(150, 100)">
+            <!-- Moon -->
+            <path d="M150,50 C150,150 250,250 350,250 C250,250 150,350 150,450 C150,350 50,250 50,150 C50,50 150,50 150,50 Z" fill="#FFC107" fill-rule="nonzero"></path>
+            
+            <!-- Person Sleeping -->
+            <rect id="Bed" fill="#8D6E63" x="100" y="300" width="400" height="30" rx="5"></rect>
+            <rect id="Mattress" fill="#EEEEEE" x="100" y="280" width="400" height="20" rx="5"></rect>
+            <rect id="Pillow" fill="#FFFFFF" x="120" y="250" width="80" height="30" rx="10"></rect>
+            
+            <!-- Person -->
+            <circle id="Head" fill="#FFCCBC" cx="170" cy="250" r="30"></circle>
+            <path d="M140,280 L140,350 C140,350 170,350 200,350 C230,350 260,350 260,350 L260,300 C260,300 230,320 200,320 C170,320 140,280 140,280 Z" fill="#3F51B5" fill-rule="nonzero"></path>
+            
+            <!-- Zzz -->
+            <text font-family="Arial-BoldMT, Arial" font-size="36" font-weight="bold" fill="#3F51B5" x="220" y="200">
+                Zzz
+            </text>
+            <text font-family="Arial-BoldMT, Arial" font-size="24" font-weight="bold" fill="#3F51B5" x="260" y="170">
+                Zzz
+            </text>
+            <text font-family="Arial-BoldMT, Arial" font-size="16" font-weight="bold" fill="#3F51B5" x="290" y="150">
+                Zzz
+            </text>
+            
+            <!-- CPAP Machine -->
+            <rect id="CPAP-Body" fill="#607D8B" x="350" y="200" width="100" height="60" rx="10"></rect>
+            <rect id="CPAP-Screen" fill="#B2EBF2" x="360" y="210" width="80" height="30" rx="5"></rect>
+            <path d="M400,260 C400,260 400,280 400,300 C400,320 380,330 350,330 C320,330 300,320 300,300 C300,280 300,250 300,250" stroke="#90A4AE" stroke-width="10" fill="none"></path>
+            <path d="M300,250 C300,250 280,240 280,220 C280,200 300,190 300,190" stroke="#90A4AE" stroke-width="10" fill="none"></path>
+            <rect id="Mask" fill="#B0BEC5" x="270" y="190" width="60" height="60" rx="30"></rect>
+            
+            <!-- Breathing Pattern -->
+            <path d="M450,150 C470,130 480,150 500,130 C520,110 530,130 550,110" stroke="#FF5722" stroke-width="3" fill="none"></path>
+            <path d="M450,180 C470,180 480,180 500,180 C520,180 530,180 550,180" stroke="#4CAF50" stroke-width="3" fill="none"></path>
+            <text font-family="Arial-BoldMT, Arial" font-size="12" font-weight="bold" fill="#FF5722" x="560" y="110">
+                Disrupted
+            </text>
+            <text font-family="Arial-BoldMT, Arial" font-size="12" font-weight="bold" fill="#4CAF50" x="560" y="180">
+                Normal
+            </text>
+        </g>
+    </g>
+</svg>

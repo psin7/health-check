@@ -11,13 +11,7 @@ const Home = () => {
       path: '/vision-tests',
       color: 'from-blue-400 to-blue-600',
     },
-    {
-      title: 'Hearing Tests',
-      description: 'Assessments for hearing ability, speech discrimination, and tinnitus.',
-      icon: '👂',
-      path: '/hearing-tests',
-      color: 'from-teal-400 to-teal-600',
-    },
+    // Hearing Tests removed
     {
       title: 'Neurological & Cognitive Tests',
       description: 'Assessments for ADHD, dyslexia, autism spectrum, and cognitive function.',
@@ -25,6 +19,7 @@ const Home = () => {
       path: '/neurological-tests',
       color: 'from-purple-400 to-purple-600',
     },
+    // Memory & Cognitive Test removed
     {
       title: 'Mental Health Tests',
       description: 'Screenings for depression, anxiety, bipolar disorder, PTSD, and OCD.',

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import TestEngine from '../components/TestEngine';
-import { depressionTest, anxietyTest } from '../data/testData';
+import { depressionTest, anxietyTest, bipolarTest, ptsdTest, ocdTest } from '../data/tests';
 
 const MentalHealthTests = () => {
   const [activeTest, setActiveTest] = useState(null);
@@ -14,6 +14,15 @@ const MentalHealthTests = () => {
         break;
       case 'anxiety':
         test = anxietyTest;
+        break;
+      case 'bipolar':
+        test = bipolarTest;
+        break;
+      case 'ptsd':
+        test = ptsdTest;
+        break;
+      case 'ocd':
+        test = ocdTest;
         break;
       default:
         return; // Test not implemented yet
@@ -155,7 +164,7 @@ const MentalHealthTests = () => {
                 className="btn-primary"
                 onClick={() => startTest(test.id)}
               >
-                {(test.id === 'depression' || test.id === 'anxiety') ? 'Start Test' : 'Coming Soon'}
+                {(test.id === 'depression' || test.id === 'anxiety' || test.id === 'bipolar' || test.id === 'ptsd' || test.id === 'ocd') ? 'Start Test' : 'Coming Soon'}
               </motion.button>
             </div>
           </motion.div>

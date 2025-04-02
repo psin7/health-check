@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Diabetes Test</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F5A623" offset="0%"></stop>
+            <stop stop-color="#F06292" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Diabetes-Test" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#FFFFFF" x="0" y="0" width="800" height="600"></rect>
+        <g id="Diabetes-Icon" transform="translate(200, 100)">
+            <!-- Blood Drop -->
+            <path d="M200,50 C200,150 300,300 200,400 C100,300 0,150 0,50 C0,22.4 22.4,0 50,0 L150,0 C177.6,0 200,22.4 200,50 Z" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+            
+            <!-- Glucose Meter -->
+            <rect id="Meter-Body" fill="#4A90E2" x="250" y="100" width="150" height="250" rx="20"></rect>
+            <rect id="Screen" fill="#E6F7FF" x="270" y="130" width="110" height="80" rx="5"></rect>
+            <text font-family="Arial-BoldMT, Arial" font-size="24" font-weight="bold" fill="#4A90E2" x="300" y="180">
+                120
+            </text>
+            <text font-family="Arial-BoldMT, Arial" font-size="14" font-weight="bold" fill="#4A90E2" x="330" y="200">
+                mg/dL
+            </text>
+            
+            <!-- Buttons -->
+            <circle id="Button1" fill="#FFFFFF" cx="300" cy="250" r="15"></circle>
+            <circle id="Button2" fill="#FFFFFF" cx="350" cy="250" r="15"></circle>
+            <rect id="Button3" fill="#FFFFFF" x="285" y="290" width="80" height="30" rx="5"></rect>
+            
+            <!-- Test Strip -->
+            <rect id="TestStrip" fill="#F8E71C" x="300" y="70" width="50" height="30" rx="5"></rect>
+            <rect id="TestStripEnd" fill="#F5A623" x="310" y="70" width="30" height="30" rx="5"></rect>
+            
+            <!-- Apple -->
+            <circle id="Apple" fill="#7ED321" cx="100" cy="450" r="40"></circle>
+            <path d="M100,410 L100,390 C100,390 110,380 120,390" stroke="#5A9216" stroke-width="3" fill="none"></path>
+            
+            <!-- Water Glass -->
+            <path d="M350,450 L370,450 L360,380 L340,380 Z" fill="#E6F7FF" fill-rule="nonzero"></path>
+            <path d="M340,380 L360,380 L370,450 L350,450 Z" stroke="#4A90E2" stroke-width="2" fill="none"></path>
+            
+            <!-- Sneaker -->
+            <path d="M150,450 C150,450 180,430 200,440 C220,450 230,460 240,460 C250,460 250,450 250,450 L150,450 Z" fill="#9B9B9B" fill-rule="nonzero"></path>
+            <path d="M150,450 L250,450 C250,450 250,460 240,460 C230,460 220,450 200,440 C180,430 150,450 150,450 Z" stroke="#4A4A4A" stroke-width="2" fill="none"></path>
+        </g>
+    </g>
+</svg>

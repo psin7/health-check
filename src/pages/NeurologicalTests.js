@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import TestEngine from '../components/TestEngine';
-import { adhdTest } from '../data/testData';
+import { adhdTest, dyslexiaTest, autismQuotientTest } from '../data/tests';
 
 const NeurologicalTests = () => {
   const [activeTest, setActiveTest] = useState(null);
@@ -9,6 +9,10 @@ const NeurologicalTests = () => {
   const startTest = (testId) => {
     if (testId === 'adhd') {
       setActiveTest(adhdTest);
+    } else if (testId === 'dyslexia') {
+      setActiveTest(dyslexiaTest);
+    } else if (testId === 'autism') {
+      setActiveTest(autismQuotientTest);
     } else {
       // Show a coming soon message for other tests
       alert('This test is coming soon!');
@@ -51,17 +55,6 @@ const NeurologicalTests = () => {
         'Evaluates social skills, attention switching, communication, and imagination',
         'Takes approximately 10 minutes to complete',
         'Developed by researchers at Cambridge University'
-      ]
-    },
-    {
-      id: 'cognitive',
-      title: 'Memory & Cognitive Function Test',
-      description: 'A series of exercises to assess short-term memory, pattern recognition, and cognitive processing speed.',
-      image: 'https://images.unsplash.com/photo-1565711561500-49678a10a63f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-      details: [
-        'Includes visual memory, number sequencing, and pattern recognition tasks',
-        'Takes approximately 15 minutes to complete',
-        'Provides separate scores for different cognitive domains'
       ]
     }
   ];
@@ -138,7 +131,7 @@ const NeurologicalTests = () => {
                 className="btn-secondary"
                 onClick={() => startTest(test.id)}
               >
-                {test.id === 'adhd' ? 'Start Test' : 'Coming Soon'}
+                {test.id === 'adhd' || test.id === 'dyslexia' || test.id === 'autism' || test.id === 'cognitive' ? 'Start Test' : 'Coming Soon'}
               </motion.button>
             </div>
           </motion.div>
